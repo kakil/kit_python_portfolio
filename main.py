@@ -19,3 +19,7 @@ with col2:
     python and machine learning.
     """
     st.info(content)
+
+content2 = "Below you will find some of the apps I have built with Python.  Feel free to contact me!"
+st.write(content2)
+

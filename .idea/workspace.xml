@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c004cc2-8735-4531-8b18-f5cc8a00e9ad" name="Changes" comment="Add data source and image files.">
-      <change afterPath="$PROJECT_DIR$/images/kit_photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="0c004cc2-8735-4531-8b18-f5cc8a00e9ad" name="Changes" comment="Created website layout.  Added my photo and description.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713851046239</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created website layout.  Added my photo and description.">
+      <option name="closed" value="true" />
+      <created>1713852061294</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713852061294</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,6 +94,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit." />
     <MESSAGE value="Add data source and image files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add data source and image files." />
+    <MESSAGE value="Created website layout.  Added my photo and description." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created website layout.  Added my photo and description." />
   </component>
 </project>
