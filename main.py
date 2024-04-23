@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas
+from PIL import Image
+
 
 st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
@@ -23,14 +25,25 @@ with col2:
 content2 = "Below you will find some of the apps I have built with Python.  Feel free to contact me!"
 st.write(content2)
 
-col3, col4 = st.columns(2)
+col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 
 df = pandas.read_csv("data.csv", sep=";")
 
 with col3:
     for index, row in df[:10].iterrows():
         st.header(row["title"])
+        st.write(row["description"])
+        image = "images/" + row["image"]
+        st.image(image, width=256)
+        st.markdown(f"[Source]({row['url']})")
+
 
 with col4:
     for index, row in df[10:].iterrows():
         st.header(row["title"])
+        st.write(row["description"])
+        image = "images/" + row["image"]
+        st.image(image, width=256)
+        st.markdown(f"[Source]({row['url']})")
+
+
