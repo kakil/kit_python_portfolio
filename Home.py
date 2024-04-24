@@ -4,6 +4,7 @@ from PIL import Image
 import os
 
 
+
 st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
 
