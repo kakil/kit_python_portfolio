@@ -1,8 +1,7 @@
 import streamlit as st
-import pandas
+import pandas as pd
 from PIL import Image
 import os
-
 
 
 st.set_page_config(layout="wide")
@@ -24,12 +23,15 @@ with col2:
     """
     st.info(content)
 
-content2 = "Below you will find some of the apps I have built with Python.  Feel free to contact me!"
+content2 = ("Below you will find some of the apps I have built with Python.  "
+            "Feel free to contact me!")
 st.write(content2)
 
 col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 
-df = pandas.read_csv("data.csv", sep=";")
+df = pd.read_csv("data.csv", sep=";")
+df["source url"] = df["source url"].astype(str)
+df["app url"] = df["app url"].astype(str)
 
 with col3:
     for index, row in df[:10].iterrows():
@@ -37,8 +39,24 @@ with col3:
         st.write(row["description"])
         image = "images/" + row["image"]
         st.image(image, width=256)
-        st.markdown(f"[Source]({row['url']})")
 
+        source_link = ""
+        if (pd.notna(row['source url'])
+                and row['source url'] != 'nan'
+                and row['source url'].strip() != ''):
+            source_link = f"[Source]({row['source url']})"
+
+        app_link = ""
+        if (pd.notna(row['app url'])
+                and row['app url'] != 'nan'
+                and row['app url'].strip() != ''):
+            app_link = f"[App]({row['app url']})"
+
+        if source_link or app_link:
+            st.markdown(f"{source_link}&nbsp;&nbsp;&nbsp;&nbsp;{app_link}",
+                        unsafe_allow_html=True)
+        else:
+            st.write("COMING SOON")
 
 with col4:
     for index, row in df[10:].iterrows():
@@ -46,6 +64,23 @@ with col4:
         st.write(row["description"])
         image = "images/" + row["image"]
         st.image(image, width=256)
-        st.markdown(f"[Source]({row['url']})")
+
+        source_link = ""
+        if (pd.notna(row['source url'])
+                and row['source url'] != 'nan'
+                and row['source url'].strip() != ''):
+            source_link = f"[Source]({row['source url']})"
+
+        app_link = ""
+        if (pd.notna(row['app url'])
+                and row['app url'] != 'nan'
+                and row['app url'].strip() != ''):
+            app_link = f"[App]({row['app url']})"
+
+        if source_link or app_link:
+            st.markdown(f"{source_link}&nbsp;&nbsp;&nbsp;&nbsp;{app_link}",
+                        unsafe_allow_html=True)
+        else:
+            st.write("COMING SOON")
 
 
