@@ -53,8 +53,12 @@ with col3:
             app_link = f"[App]({row['app url']})"
 
         if source_link or app_link:
-            st.markdown(f"{source_link}&nbsp;&nbsp;&nbsp;&nbsp;{app_link}",
-                        unsafe_allow_html=True)
+            st.markdown(
+                f"<span style='font-size:20px;'>{source_link}"
+                f"&nbsp;&nbsp;&nbsp;&nbsp;{app_link}</span>",
+                unsafe_allow_html=True
+            )
+
         else:
             st.write("COMING SOON")
 
@@ -78,8 +82,12 @@ with col4:
             app_link = f"[App]({row['app url']})"
 
         if source_link or app_link:
-            st.markdown(f"{source_link}&nbsp;&nbsp;&nbsp;&nbsp;{app_link}",
-                        unsafe_allow_html=True)
+            st.markdown(
+                f"<span style='font-size:20px;'>{source_link}"
+                f"&nbsp;&nbsp;&nbsp;&nbsp;{app_link}</span>",
+                unsafe_allow_html=True
+            )
+
         else:
             st.write("COMING SOON")
 
