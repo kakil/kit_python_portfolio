@@ -34,7 +34,7 @@ df["source url"] = df["source url"].astype(str)
 df["app url"] = df["app url"].astype(str)
 
 with col3:
-    for index, row in df[:10].iterrows():
+    for index, row in df[:11].iterrows():
         st.header(row["title"])
         st.write(row["description"])
         image = "images/" + row["image"]
@@ -59,7 +59,7 @@ with col3:
             st.write("COMING SOON")
 
 with col4:
-    for index, row in df[10:].iterrows():
+    for index, row in df[11:].iterrows():
         st.header(row["title"])
         st.write(row["description"])
         image = "images/" + row["image"]
